@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.ActivityIN"
+    tools:showIn="@layout/app_bar_activity_in">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="180dp"
+        app:layout_constraintBottom_toTopOf="@+id/guest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/entry"
+        android:textStyle="bold"
+        android:textSize="15sp"
+
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/guest"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/design_profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/staff"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/design_profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@id/guest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/shifting"
+        android:layout_width="101dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/design_profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="4dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintRight_toLeftOf="@+id/staff"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/design_button"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staff"
+        android:layout_marginTop="30dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

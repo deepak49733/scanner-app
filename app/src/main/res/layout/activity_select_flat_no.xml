@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SelectFlatNoActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="26dp"
+        android:text="@string/block"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tower"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tower"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <Button
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:text="Block 1"
+        app:layout_constraintEnd_toStartOf="@+id/blockdivider"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Block 2"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <Button
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Block 3"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+    <View
+        android:id="@+id/blockdivider"
+        android:layout_width="0.1dp"
+        android:layout_height="220dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/towerdivider"
+        app:layout_constraintEnd_toStartOf="@+id/tower1"
+        app:layout_constraintStart_toEndOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@+id/towerdivider"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tower"
+        android:layout_width="70dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/tower"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/unit1"
+        app:layout_constraintEnd_toEndOf="@+id/unit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/tower1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:text="Tower 1"
+        app:layout_constraintEnd_toStartOf="@+id/towerdivider"
+        app:layout_constraintStart_toEndOf="@+id/blockdivider"
+        app:layout_constraintTop_toBottomOf="@+id/tower" />
+
+    <Button
+        android:id="@+id/tower2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tower 2"
+        app:layout_constraintStart_toStartOf="@+id/tower1"
+        app:layout_constraintTop_toBottomOf="@+id/tower1" />
+
+    <Button
+        android:id="@+id/tower3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tower 3"
+        app:layout_constraintStart_toStartOf="@+id/tower2"
+        app:layout_constraintTop_toBottomOf="@+id/tower2" />
+
+
+    <View
+        android:id="@+id/towerdivider"
+        android:layout_width="0.1dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toStartOf="@+id/unit1"
+        app:layout_constraintStart_toEndOf="@+id/tower1"
+        app:layout_constraintTop_toTopOf="@+id/tower" />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="58dp"
+        android:text="@string/unit"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/unit1"
+        app:layout_constraintTop_toTopOf="@+id/tower" />
+
+    <Button
+        android:id="@+id/unit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="80dp"
+        android:text="Unit 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/towerdivider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/unit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Unit 2"
+        app:layout_constraintStart_toStartOf="@+id/unit1"
+        app:layout_constraintTop_toBottomOf="@+id/unit1" />
+
+    <Button
+        android:id="@+id/unit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit 3"
+        app:layout_constraintStart_toStartOf="@+id/unit2"
+        app:layout_constraintTop_toBottomOf="@+id/unit2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit"
+        app:layout_constraintVertical_bias="0.500">
+
+        <Button
+            android:id="@+id/previous_button"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/design_button"
+            android:text="@string/previous"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/design_button"
+            android:text="@string/next"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

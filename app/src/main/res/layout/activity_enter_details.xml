@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EnterDetailsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Enter Visitor Details" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp">
+
+        <Button
+            android:id="@+id/in"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:background="@drawable/design_button"
+            android:text="IN"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_weight="1" />
+
+        <Button
+            android:id="@+id/out"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/design_button"
+            android:text="OUT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile"
+                        android:layout_width="98dp"
+                        android:layout_height="98dp"
+                        android:layout_marginStart="140dp"
+                        android:layout_marginTop="50dp"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/flatno"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/profile"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/design_details"
+                        android:padding="5dp"
+                        android:text="flat no"
+                        android:textAllCaps="true" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/name"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/profile"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toEndOf="@id/flatno"
+                        android:background="@drawable/design_details"
+                        android:padding="5dp"
+                        android:hint="name"
+                        android:textAllCaps="true" />
+
+                    <EditText
+                        android:id="@+id/mobile"
+                        android:layout_width="160dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/flatno"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/design_details"
+                        android:gravity="center"
+                        android:text="mobile no"
+                        android:textAllCaps="true" />
+
+                    <EditText
+                        android:layout_width="160dp"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/flatno"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toEndOf="@id/mobile"
+                        android:background="@drawable/design_details"
+                        android:gravity="center"
+                        android:text="vehicle number"
+                        android:textAllCaps="true" />
+
+                    <EditText
+                        android:id="@+id/purpose"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/mobile"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/design_details"
+                        android:padding="10dp"
+                        android:text="purpose"
+                        android:textAllCaps="true" />
+
+                    <EditText
+                        android:id="@+id/remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_below="@id/purpose"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/design_details"
+                        android:padding="10dp"
+                        android:text="remarks"
+                        android:textAllCaps="true" />
+
+                    <Button
+                        android:id="@+id/previous"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/remarks"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/design_button"
+                        android:text="@string/previous"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/next_button"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/remarks"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/previous"
+                        android:background="@drawable/design_button"
+                        android:text="@string/next"
+                        android:textAllCaps="false" />
+                </RelativeLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</android.support.design.widget.CoordinatorLayout>
